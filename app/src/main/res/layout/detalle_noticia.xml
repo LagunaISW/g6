@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="mx.pitalla.g6.NoticiasActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/toolbar_news"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:background="#ffffff"
+            android:paddingBottom="3dp"
+            android:minHeight="400dp">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:id="@+id/imgDetalleNoticia"
+                android:src="@drawable/noticia"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="Tiene Guaymas Reina y Rey feo de  Carnaval "
+                android:id="@+id/txvTituloNoticiaDetalle"
+                android:textColor="#1e1538"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:textSize="20dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Enero 27, 2016 11:20 am"
+                android:id="@+id/txvFechaNoticiaDetalle"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Ante un auditorio “Fray Ivo Toneck” completamente lleno y en medio de porras y vivas, fueron electos Yusvisaret Hernández Enríquez y Francisco Soto Vargas como Reina y Rey Feo respectivamente.  Noche de luz y alegría, de gritos y hasta llantos, en un escenario ideal para la elaboración del regio evento, disfrutaron todos los participantes.  Previo a la fiesta más importante de los guaymenses y del Estado, el grupo de candidatos y candidatas cumplieron a plenitud con las expectativas generadas a lo largo del proceso.  Luego de un tiempo de deliberaciones, el jurado, conformado totalmente por sinodales foráneos y dando fe de la legalidad el Notario Público Alfredo Ortega López, lo que dio seguridad a un proceso transparente, se tomó la decisión a favor de Yusvisaret y Francisco.  Cabe destacar que la decisión fue bien recibida por los poco más de mil asistentes al evento.  Con vestuario de coctel, fantasía y gala, pruebas de talento, de cultura y otros, una a una, las aspirantes se sometieron al escrutinio de los jueces y cumplieron con  éxito las pruebas exigidas.  La primera decisión como Señorita Simpatía recayó en Erika Lourdes González Benítez, quien además se adjudicó el título de baronesa.  El título como Señorita Web y marquesa de la festividad fue para Diana Alicia Aceves Rodríguez, mientras que Karla Yamilet Tesisteco Barrón obtuvo el título de Señorita Elegancia, a quien además se le cruzó la banda de Princesa Real.  La distinción de duquesa fue para Perla Edith Osuna García y  como condesa el jurado eligió a Yael Daniela Mendívil Castro.  Luego llegó el turno de los aspirantes a Rey Feo y casi bajo la misma tónica de selección, los jueces se inclinaron por Francisco Soto Vargas como cabeza de la corte real.  Como príncipe eligieron a José Francisco Villegas, como duque a Sly Eduardo Aragón Barrón,  primer bufón Enrique Colmenares Torres y segundo bufón Luis Alejandro Sánchez Pérez.  En representación del alcalde Lorenzo De Cima Dworak, acudió el edil Alfonso Uribe Corona, quien en compañía del director del Instituto de Festividades, Javier Ballesteros, de Ariel Noriega, director del IMCA, de Olegario Félix, director de Acción Cívica, regidores y funcionarios del Ayuntamiento de Guaymas, colocaron las bandas alusivas al premio obtenido.  De esta forma, todo quedó listo para la ceremonia de coronación el próximo viernes 5 de febrero a partir de las siete de la tarde en ese mismo escenario.  ¡Bienvenidos al Carnaval Internacional de Guaymas 2016! La fiesta comenzó… "
+                android:id="@+id/txvContenidoNoticiaDetalle"
+                android:textSize="15dp"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="50dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

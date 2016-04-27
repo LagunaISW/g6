@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Guaymas 6.0</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="settings">Settings</string>
+
+    <!-- ReportView strings  -->
+    <string name="button_request_report">CONSULTAR TU REPORTE</string>
+    <string name="report_title">Reporte Ciudadano</string>
+    <string name="prompt_et_interested">Interesado</string>
+    <string name="prompt_et_address">Dirección</string>
+    <string name="label_location">Localización del reporte.</string>
+    <string name="prompt_et_telephone">Teléfono</string>
+    <string name="prompt_et_email">Correo</string>
+    <string name="prompt_et_subject">Asunto</string>
+    <string name="select_photo">TOMAR FOTO</string>
+    <string name="send_request_report">SOLICITAR PETICIÓN</string>
+    <string name="error_field_required">Este campo es requerido</string>
+    <string name="error_invalid_email">Correo electrónico invalido</string>
+    <string name="error_select_suburb">Debe seleccionar una colonia</string>
+    <string name="photo_evidence">Agregar foto</string>
+    <string name="photo_from_gallery">Galería</string>
+    <string name="photo_camera">Cámara</string>
+    <string name="photo_cancel">Cancelar</string>
+    <string name="photo_delete">Borrar foto actual</string>
+    <string name="select_photo_title">Seleccionar foto</string>
+    <string name="error_no_gallery">Error al intentar de abrir la galería</string>
+    <string name="error_no_camera">Error al intentar de abrir la cámara</string>
+    <string name="album_name">aquiesguaymas</string>
+    <string name="cannot">Cannot</string>
+    <string name="sending_report">Enviando reporte...</string>
+    <string name="play_services_not_installed">Google Play services no está instalado en este dispositivo.</string>
+    <string name="error_sending_the_request">Hubo un error al enviar tu solicitud, por favor inténtelo de nuevo.</string>
+    <string name="title_toolbar_report">Reporte</string>
+    <string name="title_error_prompt">Error</string>
+    <string name="btn_accept">ACEPTAR</string>
+    <string name="message_no_internet">"Se necesita estar conectado a Internet"</string>
+    <string name="report_dialog_title">REPORTE CIUDADANO</string>
+    <string name="message_dialog_report1">Su petición ha sido dada de alta en el sistema de recepción de reportes ciudadanos.</string>
+    <string name="folio_dialog_report1">Folio de seguimiento:</string>
+    <string name="message_dialog_report2">Personal de la dirección de atención ciudadana se comunicará con usted para monitorear el avance de su reporte.</string>
+    <string name="tel_dialog_report3">Tel: (622) 2 07 57 | (622) 2 44 11 | 072</string>
+    <string name="comeback_button_dialog">REGRESAR</string>
+    <string name="errror_getting_the_photo">Error al cargar la foto</string>
+    <string name="searching_report">Buscando reporte...</string>
+    <string name="error_searching_report">Ocurrió un error al consultar el reporte</string>
+    <string name="error_no_folio">Debe ingresar un folio</string>
+    <!-- Report Map -->
+    <string name="title_activity_map_location">MapLocationActivity</string>
+    <string name="title_toolbar_location_report">Localización del reporte</string>
+    <string name="message_location_activity">Para modificar la localización del reporte toque el mapa en la ubicación deseada para mover en indicador.</string>
+    <string name="btn_comeback_from_map">REGRESAR</string>
+    <string name="btn_select_location">SELECCIONAR POSICIÓN ACTUAL</string>
+    <string name="title_activity_consult_report">ConsultReportActivity</string>
+    <string name="google_maps_key">AIzaSyCRNuHLxg8JZ1HKgZjb13JNGvBDZRr3LUc</string>
+
+    <string name="title_toolbar_noticia">Noticas</string>
+
+    <string name="title_toolbar_radio">Radio</string>
+
+    <string name="title_toolbar_event">Calendario</string>
+
+    <string name="back">ATRÁS</string>
+    <string name="next">SIGUIENTE</string>
+
+</resources>

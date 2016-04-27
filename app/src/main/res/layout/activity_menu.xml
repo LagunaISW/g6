@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context="mx.gob.guaymas.guaymas60.MenuActivity"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/toolbar"
+        >
+    </include>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_botones">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imgNews"
+                    android:src="@drawable/btnnoticias"
+                    android:scaleType="centerInside"
+                    android:background="#00000000"
+                    android:padding="0dp"
+                    android:nestedScrollingEnabled="true" />
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageButton8"
+                android:layout_weight="1.5"
+                android:background="#00000000" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_botones">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imgEvents"
+                    android:src="@drawable/btneventos"
+                    android:scaleType="centerInside"
+                    android:background="#00000000"
+                    android:padding="0dp"
+                    android:onClick="irEventos" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:padding="2dp">
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageButton4"
+                android:layout_weight="1.3"
+                android:background="#00000000" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_botones">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imgRadio"
+                    android:src="@drawable/btnradio"
+                    android:scaleType="centerInside"
+                    android:background="#00000000"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageButton6"
+                android:layout_weight="1.3"
+                android:background="#00000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_botones">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imgReport"
+                    android:src="@drawable/btnreporte"
+                    android:scaleType="centerInside"
+                    android:background="#00000000"
+                    android:padding="0dp"
+                    android:onClick="irReporte" />
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageButton2"
+                android:layout_weight="1.5"
+                android:background="#00000000" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_botones">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imgDirectory"
+                    android:src="@drawable/btndirectorio"
+                    android:scaleType="centerInside"
+                    android:background="#00000000"
+                    android:padding="0dp"
+                    android:onClick="irDirectorio" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="5"
+        android:background="#283140"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="WWW.GUAYMAS.GOB.MX"
+            android:id="@+id/txvLinkToPage"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:gravity="center|center_vertical|center_horizontal"
+            android:textSize="18dp" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/txvyqw"
+            android:layout_weight="2"
+            android:padding="2dp">
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imgBtFacebook"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:textSize="20dp"
+                android:background="#00000000"
+                android:src="@drawable/f"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/txvys"
+            android:layout_weight="2"
+            android:padding="2dp">
+
+            <ImageButton
+                android:id="@+id/imgBtYoutube"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/y"
+                android:background="#00000000"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

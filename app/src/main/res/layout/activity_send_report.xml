@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/toolbar_report" >
+    </include>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="#00D7C6">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/layout_round_noborder1"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_color"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/report_dialog_title"
+                android:id="@+id/tvTitleDialog" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/layout_round_noborder4"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_color"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hola JULIO ISAAC NAVA CORDERO"
+                android:id="@+id/tvInterestName" />
+
+            <TextView
+                android:padding="5dp"
+                android:textColor="@color/news_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical|right"
+                android:text="@string/message_dialog_report1"
+                android:id="@+id/textView19" />
+
+            <TextView
+                android:padding="5dp"
+                android:textColor="@color/news_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/folio_dialog_report1"
+                android:id="@+id/textView20" />
+
+            <TextView
+                android:padding="5dp"
+                android:textColor="@color/news_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="12345"
+                android:id="@+id/tvFolioResult" />
+
+            <TextView
+                android:padding="5dp"
+                android:textColor="@color/news_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical|right"
+                android:text="@string/message_dialog_report2"
+                android:id="@+id/textView22" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                android:textColor="@color/news_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/tel_dialog_report3"
+                android:id="@+id/textView23" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:onClick="returnToReport"
+                    android:background="@drawable/round_corner_button_purple"
+                    android:text="@string/comeback_button_dialog"
+                    android:id="@+id/btnComeBackFromReport" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

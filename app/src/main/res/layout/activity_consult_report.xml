@@ -1,0 +1,388 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backrepeat"
+    tools:context=".MainActivity">
+
+
+    <!--LinearLayout
+        android:id="@+id/header"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:background="#1D8AA9"
+        android:layout_centerHorizontal="true">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="GUAYMAS"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="2015  - 2018"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:id="@+id/textView2" />
+    </LinearLayout-->
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/toolbar_report" >
+    </include>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="#00D7C6"
+        android:layout_below="@+id/app_bar"
+        android:layout_centerHorizontal="true">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/line"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#1486A6"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Consulta el estatus y seguimiento de tu reporte"
+                android:id="@+id/tvReporteCiudadanoConsult" />
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:padding="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <!--Folio Start-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/layout_round_bg"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:background="#fff"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:hint="Folio del reporte"
+                            android:id="@+id/etFolioReport" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- Folio End -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:paddingLeft="20dp"
+                        android:onClick="checkReport"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/round_corner_button_purple"
+                        android:drawableLeft="@drawable/view_report"
+                        android:text="CONSULTAR"
+                        android:id="@+id/btnCheckReport" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/progress_consult"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:padding="1dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/no_result"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:padding="1dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#F00"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="El folio 2165454 no existe"
+                    android:id="@+id/tvErrorNotFound" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@drawable/layout_round_noborder1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Folio:"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/textView5" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="236"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="5dp"
+                        android:id="@+id/tvFolio" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/layout_round_noborder2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de alta:"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/textView7" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10/02/2015"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="5dp"
+                        android:id="@+id/tvFecha" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/layout_round_noborder2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Colonia:"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/textView9" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="GUAYMAS NORTE"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="5dp"
+                        android:id="@+id/tvColonia" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/layout_round_noborder2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo:"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/textView11" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BACHE"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="5dp"
+                        android:id="@+id/tvTipo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/layout_round_noborder2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Estatus:"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/textView17" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pendiente"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="5dp"
+                        android:id="@+id/tvEstatus" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/layout_round_noborder2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Asunto:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/textView13" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="3dp"
+                        android:textAlignment="textStart"
+                        android:layout_gravity="start"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                        android:padding="5dp"
+                        android:id="@+id/tvAsunto" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/layout_round_noborder3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Seguimiento:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/textView15" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="3dp"
+                        android:textAlignment="textStart"
+                        android:layout_gravity="start"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                        android:padding="5dp"
+                        android:id="@+id/tvSeguimiento" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:padding="5dp"
+                android:src="@drawable/calendario"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#23878F"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Carrera de 10 km (Inscripción Abierta)"
+                android:id="@+id/tvEventoNombre" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="2016/02/07  Instituto Municipal del Deporte"
+                android:textColor="#5b2c7c"
+                android:id="@+id/tvEventoInfo" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:src="@drawable/dotted" /-->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/lineas" />
+
+</LinearLayout>
